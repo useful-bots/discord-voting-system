@@ -1,0 +1,22 @@
+{
+  "name": "discord-voting-system",
+  "version": "1.0.0",
+  "description": "A web server to receive webhooks of votes from top.gg",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "@top-gg/sdk": "^3.1.3",
+    "mongoose": "^6.3.4",
+    "dotenv": "^16.0.1"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "repository": {
+    "url": "https://github.com/HarukaYamamoto0/discord-voting-system.git"
+  },
+  "license": "MIT"
+}
