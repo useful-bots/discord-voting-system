@@ -1,19 +1,11 @@
 const { connect } = require("mongoose");
-require("dotenv").config();
 
-async () => {
-  const urlConnect = process.env.tokenData;
+module.exports = async () => {
+  const tokenData = process.env.tokenData;
 
-  if (!urlConnect) {
+  if (!tokenData) {
     throw new Error("Please insert the tokenData variable into the .env file");
-  }
+  } else await connect(tokenData);
 
-  await connect(process.env.tokenData, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  });
-
-  console.log("[DATABASE] - Connected to database");
+  console.log("Connected to database");
 };
