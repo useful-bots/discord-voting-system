@@ -1,2 +1,3 @@
 # discord-voting-system
-A web server to receive webhooks of votes from top.gg
+
+A simple web server to receive webhook responses from topgg and voidbots platforms.

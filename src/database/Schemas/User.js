@@ -5,6 +5,7 @@ const schemaUser = new Schema({
   reps: { type: Number, default: 0 },
   wishes: {
     topgg: { type: Number, default: 0 },
+    voidbots: { type: Number, default: 0 },
   },
   balance: {
     coins: { type: Number, default: 0 },
@@ -21,12 +22,14 @@ const schemaUser = new Schema({
     require: false,
   },
   cooldowns: {
-    topgg: { type: Number, default: 0 },
     daily: { type: Number, default: 0 },
     work: { type: Number, default: 0 },
     company: { type: Number, default: 0 },
     theft: { type: Number, default: 0 },
     rep: { type: Number, default: 0 },
+
+    topgg: { type: Number, default: 0 },
+    voidbots: { type: Number, default: 0 },
   },
 });
 

@@ -5,10 +5,10 @@ const app = express();
 (async () => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
-  app.get("/", (req, res) => res.status(200));
+  app.get("/", (req, res) => res.status(200)); // receive pings
 
   await require("./database/main.js")();
-  await require("./webhook.js")(app);
+  await require("./webhooks/")(app);
 
   await app.listen(process.env.PORT || 3000, () => {
     console.log("Server running");
